@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { mdiCog } from '@mdi/js';
+import './imagelab-block'
+import React, { useState } from "react";
+import { BlocklyWorkspace } from "react-blockly";
+import { MY_TOOLBOX } from './toolboxConfiguration';
 
 function App() {
+  const [xml, setXml] = useState();
+
+  const initialXml =
+    ``;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BlocklyWorkspace
+    className="fill-height"
+    toolboxConfiguration={MY_TOOLBOX} // this must be a JSON toolbox definition
+    initialXml={initialXml}
+    onXmlChange={setXml}
+    workspaceConfiguration={{
+      grid: {
+        spacing: 20,
+        length: 3,
+        colour: "#ccc",
+        snap: true,
+      },
+    }}
+  />
+  )
 }
 
 export default App;
