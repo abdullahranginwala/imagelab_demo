@@ -31,8 +31,16 @@ function App() {
           <Navbar.Group align={Alignment.LEFT}>
               <Navbar.Heading>ImageLab</Navbar.Heading>
               <Navbar.Divider />
-              <Button className="bp4-minimal" icon="home" text="Home" />
-              <Button className="bp4-minimal" icon="document" text="Files" />
+              <Button className="bp4-minimal" icon="document-open" text="Open" />
+              <Button className="bp4-minimal" icon="document-share" text="Save" />
+              <Button className="bp4-minimal" icon="lightbulb" />
+          </Navbar.Group>
+          <Navbar.Group align={Alignment.RIGHT}>
+              <Button className="bp4-minimal" icon="play" text="Run" />
+              <Navbar.Divider />
+              <Button className="bp4-minimal" icon="undo" />
+              <Button className="bp4-minimal" icon="redo" />
+              <Button className="bp4-minimal" icon="reset" />
           </Navbar.Group>
       </Navbar>
       <div className='row'>
@@ -44,16 +52,13 @@ function App() {
           workspaceConfiguration={workspaceConfiguration}
         />
         <div className='panel'>
-          <h1>Preview</h1>
-          <Card interactive={true} elevation={Elevation.TWO}>
-            <h5><a href="#">Card heading</a></h5>
-            <p>Card content</p>
-            <Button>Submit</Button>
+          <h3>Preview <Button className="bp4-minimal" icon="download" /> </h3>
+          <Card interactive={true} elevation={Elevation.ONE}>
+            <p>Original Image</p>
           </Card>
-          <Card interactive={true} elevation={Elevation.TWO}>
-            <h5><a href="#">Card heading</a></h5>
-            <p>Card content</p>
-            <Button>Submit</Button>
+          <br />
+          <Card interactive={true} elevation={Elevation.ONE}>
+            <p>Processed Image</p>
           </Card>
         </div>
       </div>
