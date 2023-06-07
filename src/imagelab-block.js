@@ -1,4 +1,5 @@
 import Blockly from "blockly";
+import "./browse-blocks-functions"
 /* Configuration of all blocks included in our application in JSON format. */
 
 Blockly.defineBlocksWithJsonArray([
@@ -21,6 +22,7 @@ Blockly.defineBlocksWithJsonArray([
       colour: 160,
       tooltip: "Choose an image",
       helpUrl: "",
+      extensions: ["file_button"],
     },
     {
       type: "browse_folder",
@@ -40,6 +42,7 @@ Blockly.defineBlocksWithJsonArray([
       colour: 160,
       tooltip: "Choose output folder",
       helpUrl: "",
+      extensions: ["folder_button"],
     },
     {
       type: "basic_readimage",

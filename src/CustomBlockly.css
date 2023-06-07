@@ -1,0 +1,69 @@
+/* Light theme */
+
+.blocklyToolboxDiv {
+  margin-top: 1px;
+  background-color: #EBF1F5;  /* Blueprint.js light theme primary color */
+  color: #182026;  /* Blueprint.js light theme text color */
+  padding: 8px !important;
+  border: none;
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+}
+
+.blocklyTreeRow {
+  height: 22px;
+  line-height: 22px;
+  margin-bottom: 3px;
+  padding-right: 8px;
+  white-space: nowrap;
+  border: none !important;
+}
+
+/* Category groups */
+
+.blocklyTreeGroup {
+  padding-left: 16px;
+}
+
+/* Category labels */
+
+.blocklyTreeLabel {
+  cursor: pointer;
+  font-family: "PT Sans", sans-serif;  /* Blueprint.js font */
+  font-size: 13px;
+  padding: 1px 3px 1px 3px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.blocklyTreeSelected>.blocklyTreeIcon,
+.blocklyTreeSelected>.blocklyTreeLabel {
+  background-color: #A7B6C2;  /* Blueprint.js selected state color */
+  color: #182026;  /* Blueprint.js selected text color */
+}
+
+
+/* Override Blockly's default CSS to hide expand/collapse icons. */
+
+.blocklyTreeIconOpen::before,
+.blocklyTreeIconClosed::before {
+  content: none !important;
+}
+
+/* Blocks */
+
+.blocklyBlockCanvas {
+  /* Blueprint.js light theme canvas color */
+  background-color: #EBF1F5;
+}
+
+.blocklyFlyoutBackground {
+  /* Blueprint.js light theme background color */
+  fill: #EBF1F5;
+}
+
+.blocklyFlyout .blocklyBlockDark .blocklyPath {
+  /* Blueprint.js light theme block color */
+  fill: #A7B6C2;
+}
